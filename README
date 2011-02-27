@@ -1,0 +1,13 @@
+Packages
+========
+
+Be carefull !! : it doesn't ask for anything.
+
+The packages I like to install.
+
+Requires : python-apt
+
+Set install.py executable with
+chmod +x install.py
+and launch
+./install.py
