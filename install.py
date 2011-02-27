@@ -5,12 +5,15 @@ Install all needed packages
 
 from os import listdir
 from os import system
+from os import path
 from apt.cache import Cache
 from apt.progress.base import InstallProgress
 from apt.progress import text
 
+HERE = path.dirname(__file__)
+
 def get_packages():
-    f_obj = file('./packages')
+    f_obj = file(path.join(HERE, './packages'))
     for line in f_obj.read().splitlines():
         if line and not line.startswith('#'):
             yield str(line)
