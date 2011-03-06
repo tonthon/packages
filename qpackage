@@ -1,0 +1,26 @@
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+"""
+    Exec file for qpackage
+"""
+import sys
+
+from PyQt4 import QtGui
+
+from qpackages import MainWindow
+from choice import choose_ini_file
+
+def main():
+    app = QtGui.QApplication(sys.argv)
+    filename = choose_ini_file()
+    if filename :
+        main = MainWindow(filename)
+        screen = QtGui.QDesktopWidget().screenGeometry()
+        main.resize(screen.width(), screen.height())
+        main.show()
+        sys.exit(app.exec_())
+    else:
+        sys.exit(1)
+
+if __name__ == '__main__':
+    main()

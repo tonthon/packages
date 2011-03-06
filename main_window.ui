@@ -123,7 +123,7 @@
       <widget class="QTableView" name="PackageTable"/>
      </item>
      <item>
-      <widget class="QTextBrowser" name="LogWindow">
+      <widget class="QTextEdit" name="LogWindow">
        <property name="maximumSize">
         <size>
          <width>200</width>
