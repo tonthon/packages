@@ -1,13 +1,46 @@
 Packages
 ========
 
-Be carefull !! : it doesn't ask for anything.
+When I fresh re-install my computer, I'm all the time googling a lot
+to retrieve the name of the package I was missing.
+I write all of them inside a .ini file and then I use my app to install them.
 
-The packages I like to install.
+This app is only usable on debian-like operating systems (when apt is provided).
+It's not intended to become an industrial software, but only to provide a few
+functionalities.
 
-Requires : python-apt
 
-Set install.py executable with
-chmod +x install.py
-and launch
-./install.py
+Prelude
+-------
+
+pyqt4, dict4ini and python-apt are required.
+
+    sudo apt-get install pyqt4-dev-tools python-apt python-setuptools
+    sudo easy_install dict4ini
+
+Installation
+------------
+
+Download it and make sure the file qpackage/qpackage is executable :
+
+    chmod +x qpackage/qpackage
+
+The you need to compile the ui file :
+
+    cd qpackage/
+    pyuic4 main_window.ui -o main_window_ui.py
+
+Then you can launch it :
+
+    sudo ./qpackage/qpackage
+
+Installation rights are needed to launch the application.
+
+The inifile
+-----------
+
+A default inifile (mine) is provided.
+Syntax :
+
+    [section]
+    packagename=packagedescription
