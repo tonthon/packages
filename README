@@ -13,7 +13,7 @@ functionalities.
 Prelude
 -------
 
-pyqt4, dict4ini and python-apt are required.
+pyqt4, dict4ini and python-apt are required::
 
     sudo apt-get install pyqt4-dev-tools python-apt python-setuptools
     sudo easy_install dict4ini
@@ -21,16 +21,16 @@ pyqt4, dict4ini and python-apt are required.
 Installation
 ------------
 
-Download it and make sure the file qpackage/qpackage is executable :
+Download it and make sure the file qpackage/qpackage is executable::
 
     chmod +x qpackage/qpackage
 
-The you need to compile the ui file :
+The you need to compile the ui file::
 
     cd qpackage/
     pyuic4 main_window.ui -o main_window_ui.py
 
-Then you can launch it :
+Then you can launch it::
 
     sudo ./qpackage/qpackage
 
@@ -40,7 +40,7 @@ The inifile
 -----------
 
 A default inifile (mine) is provided.
-Syntax :
+Syntax::
 
     [section]
     packagename=packagedescription
