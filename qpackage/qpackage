@@ -7,8 +7,8 @@ import sys
 
 from PyQt4 import QtGui
 
-from qpackages import MainWindow
-from choice import choose_ini_file
+from qpackage.qpackages import MainWindow
+from qpackage.choice import choose_ini_file
 
 def main():
     app = QtGui.QApplication(sys.argv)

@@ -10,7 +10,7 @@ from apt import Cache
 
 from PyQt4 import QtGui, QtCore
 
-from progress import QOpProgress, QAcquireProgress, QInstallProgress
+from qpackage.progress import QOpProgress, QAcquireProgress, QInstallProgress
 
 TABLE_HEADER = ('name', 'description', 'to install ?',)
 

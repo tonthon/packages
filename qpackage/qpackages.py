@@ -5,9 +5,9 @@
 from PyQt4 import QtGui
 from PyQt4 import QtCore
 
-from packages import QPackagesModel
-from main_window_ui import Ui_MainWindow
-from progress import QOpProgress, QAcquireProgress
+from qpackage.packages import QPackagesModel
+from qpackage.main_window_ui import Ui_MainWindow
+from qpackage.progress import QOpProgress, QAcquireProgress
 
 
 class MainWindow(QtGui.QMainWindow):
@@ -75,6 +75,7 @@ class MainWindow(QtGui.QMainWindow):
             Update progress infos
         """
         self._ui.ProgressBar.setValue(int(value))
+        text = text.decode('utf-8')
         if not text.endswith('\n'):
             text += "\n"
         self._ui.LogWindow.append(text)
