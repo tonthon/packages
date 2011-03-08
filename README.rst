@@ -21,12 +21,12 @@ pyqt4, distutils2 and python-apt are required::
 Installation
 ------------
 
-Download its tar.gz file (download link) ::
+Download its tar.gz file (download link)::
 
     wget https://github.com/tonthon/packages/tarball/master
     tar -zxf packages.tar.gz
 
-Build ::
+Build::
 
     cd packages/
     sudo make install
