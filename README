@@ -29,7 +29,6 @@ Download its tar.gz file (download link) ::
 Build ::
 
     cd packages/
-    make
     sudo make install
 
 Then you can launch it::
