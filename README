@@ -1,4 +1,4 @@
-Packages
+QPackage
 ========
 
 When I fresh re-install my computer, I'm all the time googling a lot
@@ -13,28 +13,30 @@ functionalities.
 Prelude
 -------
 
-pyqt4, dict4ini and python-apt are required::
+pyqt4, distutils2 and python-apt are required::
 
     sudo apt-get install pyqt4-dev-tools python-apt python-setuptools
-    sudo easy_install dict4ini
+    sudo easy_install distutils2
 
 Installation
 ------------
 
-Download it and make sure the file qpackage/qpackage is executable::
+Download its tar.gz file (download link) ::
 
-    chmod +x qpackage/qpackage
+    wget https://github.com/tonthon/packages/tarball/master
+    tar -zxf packages.tar.gz
 
-The you need to compile the ui file::
+Build ::
 
-    cd qpackage/
-    pyuic4 main_window.ui -o main_window_ui.py
+    cd packages/
+    make
+    sudo make install
 
 Then you can launch it::
 
-    sudo ./qpackage/qpackage
+    sudo qpackage
 
-Installation rights are needed to launch the application.
+Installation rights are needed to launch the application (that's why we use sudo).
 
 The inifile
 -----------
